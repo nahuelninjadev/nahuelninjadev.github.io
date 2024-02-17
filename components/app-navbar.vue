@@ -73,9 +73,9 @@ const handleClick = (label) => {
 
         <component v-else :is="item.icon" class="w-6 h-6" />
 
-        <span class="tooltip">
+        <!-- <span class="tooltip">
           {{ item.label }}
-        </span>
+        </span> -->
       </li>
     </ul>
   </nav>

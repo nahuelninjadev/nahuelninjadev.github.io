@@ -52,8 +52,25 @@ const items = computed(() => [
 const handleClick = (label) => {
   if (label == "Modo Oscuro" || label == "Modo Claro") {
     darkTheme.value = !darkTheme.value;
+    if (darkTheme.value) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    }
   }
 };
+
+onMounted(() => {
+  if (localStorage.theme === "dark") {
+    //document.documentElement.classList.add("dark");
+    darkTheme.value = true;
+  } else {
+    //document.documentElement.classList.remove("dark");
+    darkTheme.value = false;
+  }
+});
 </script>
 <template>
   <nav class="mt-3">
@@ -73,9 +90,9 @@ const handleClick = (label) => {
 
         <component v-else :is="item.icon" class="w-6 h-6" />
 
-        <!-- <span class="tooltip">
+        <span class="tooltip hidden sm:block">
           {{ item.label }}
-        </span> -->
+        </span>
       </li>
     </ul>
   </nav>

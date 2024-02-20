@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html.dark {
+  @apply bg-slate-900;
+}
+
 body {
   font-family: "Inter";
 }

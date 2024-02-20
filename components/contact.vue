@@ -18,7 +18,7 @@ const items = [
 <template>
   <app-section id="contact" title="Contacto">
     <div class="text-gray-500">
-      <ul class="font-medium bg-white">
+      <ul class="font-medium bg-white dark:bg-slate-900">
         <li v-for="item in items" class="flex items-center gap-1 mb-2">
           <template v-if="!item.href">
             <component :is="item.icon" class="w-6 h-6" />

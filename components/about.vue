@@ -1,6 +1,8 @@
 <template>
   <app-section id="about">
-    <h1 class="text-2xl lg:text-5xl font-bold mb-3">Hola! 👋</h1>
+    <h1 class="text-2xl lg:text-5xl font-bold mb-3 dark:text-white">
+      Hola! 👋
+    </h1>
     <div class="text-gray-500">
       <p class="mb-2">
         Me llamo Nahuel y soy desarrollador Fullstack aunque últimamente estoy

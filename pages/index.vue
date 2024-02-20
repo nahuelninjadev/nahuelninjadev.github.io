@@ -1,6 +1,8 @@
 <template>
   <main class="container mx-auto my-5">
-    <app-banner />
+    <ClientOnly>
+      <app-banner />
+    </ClientOnly>
     <about />
     <works />
     <lab />

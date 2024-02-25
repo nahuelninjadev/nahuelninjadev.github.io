@@ -117,7 +117,7 @@ onMounted(() => {
 
 <template>
   <div
-    class="banner w-2/3 lg:w-2/4 aspect-video mx-auto rounded overflow-hidden flex items-center justify-center"
+    class="banner min-h-96 w-2/3 lg:w-2/4 aspect-video mx-auto rounded overflow-hidden flex items-center justify-center"
     id="container"
   ></div>
 </template>

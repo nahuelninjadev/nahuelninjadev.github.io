@@ -103,11 +103,22 @@ onMounted(() => {
   @apply flex items-center justify-center gap-4;
 }
 .nav-item {
-  @apply flex flex-col justify-center items-center w-9 h-9 rounded-full text-white bg-neutral-900 relative cursor-pointer shadow-xl;
+  @apply flex flex-col justify-center items-center w-9 h-9 rounded-full text-white bg-neutral-900 dark:bg-purple-400 relative cursor-pointer shadow-xl;
 }
+
+html.dark .nav-item {
+  box-shadow: 0 0 10px rgb(168 85 247), 0 0 15px rgb(168 85 247),
+    0 0 15px rgb(168 85 247);
+}
+
 .tooltip {
-  @apply absolute bottom-0 whitespace-nowrap bg-neutral-900 px-2 py-1 rounded pointer-events-none opacity-0 hover:opacity-100 transition-all duration-300 ease-tooltip-transition  
-         before:w-2 before:h-2 before:bg-neutral-900 before:absolute before:top-[-3px] before:left-1/2 before:-translate-x-1/2 before:rotate-45 before:transition-all before:duration-300 before:ease-tooltip-transition;
+  @apply absolute bottom-0 whitespace-nowrap bg-neutral-900 dark:bg-purple-400 px-2 py-1 rounded pointer-events-none opacity-0 hover:opacity-100 transition-all duration-300 ease-tooltip-transition  
+         before:w-2 before:h-2 before:bg-neutral-900 dark:before:bg-purple-400 before:absolute before:top-[-3px] before:left-1/2 before:-translate-x-1/2 before:rotate-45 before:transition-all before:duration-300 before:ease-tooltip-transition;
+}
+
+html.dark .tooltip {
+  box-shadow: 0 0 10px rgb(168 85 247), 0 0 15px rgb(168 85 247),
+    0 0 15px rgb(168 85 247);
 }
 
 .nav-item:hover .tooltip {

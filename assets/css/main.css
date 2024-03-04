@@ -10,12 +10,12 @@ body {
   font-family: "Inter";
 }
 
-.banner {
+/* .banner {
   aspect-ratio: 16/9;
   width: 800px;
   min-height: 600px;
 }
-
+ */
 @media print {
   nav,
   .banner,
